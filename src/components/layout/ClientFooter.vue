@@ -2,7 +2,10 @@
 </script>
 
 <template>
-  <main>
-    메인
-  </main>
+  <footer>
+    FOOTER
+  </footer>
 </template>
+
+<style scoped>
+</style>
