@@ -11,3 +11,9 @@ export interface PostInfo {
     content: string;
     idx:number;
 }
+
+export interface BestImageItem {
+    image: string;
+    title: string;
+    idx:number;
+}

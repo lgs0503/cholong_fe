@@ -3,9 +3,15 @@ import './assets/main.scss'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faMagnifyingGlass, faGear, faPen, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-library.add(faBars, faMagnifyingGlass)
+library.add(
+    faBars,
+    faMagnifyingGlass,
+    faGear,
+    faPen,
+    faCodeBranch
+)
 
 import App from './App.vue'
 import router from './router'

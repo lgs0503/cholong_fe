@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import Slider from "@/components/common/Slider.vue";
 import MainBoard from "@/components/common/MainBoard.vue";
-import type {ImageItem, PostInfo} from "@/interface/common";
+import type {BestImageItem, ImageItem, PostInfo} from "@/interface/common";
+import MainBestPost from "@/components/common/MainBestPost.vue";
 
 const bannerImageList : ImageItem[] = [
   {
@@ -77,33 +78,43 @@ const postInfoList : PostInfo[] = [
   }
 ]
 
-
+const bestImageInfoList : BestImageItem[] = [
+  {
+    image: "",
+    title: "이미지1",
+    idx : 1
+  },
+  {
+    image: "",
+    title: "이미지2",
+    idx : 2
+  },
+  {
+    image: "",
+    title: "이미지3",
+    idx : 3
+  },
+  {
+    image: "",
+    title: "이미지4",
+    idx : 4
+  },
+];
 </script>
 
 <template>
   <main>
+    <!-- 배너 -->
     <section>
       <slider :image-list="bannerImageList"/>
     </section>
+    <!-- 전체글 -->
     <section class="main-board-section">
       <main-board :post-info-list="postInfoList"/>
     </section>
-    <section>
-      <h2 class="section-title">인기 게시물</h2>
-      <div>
-        <div>
-          <img src="#" alt=""/>
-        </div>
-        <div>
-          <img src="#" alt=""/>
-        </div>
-        <div>
-          <img src="#" alt=""/>
-        </div>
-        <div>
-          <img src="#" alt=""/>
-        </div>
-      </div>
+    <!-- 인기 게시글 -->
+    <section class="main-best-section">
+      <main-best-post :imageList="bestImageInfoList"/>
     </section>
   </main>
 </template>

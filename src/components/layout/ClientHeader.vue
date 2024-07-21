@@ -2,7 +2,7 @@
 import {ref} from "vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
-const title = ref("Cholong 블로그");
+const title = ref("Cho-long 블로그");
 
 </script>
 

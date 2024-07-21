@@ -22,20 +22,3 @@ defineProps<{
     </template>
   </Carousel>
 </template>
-
-<style scoped>
-.carousel__item {
-  height: 300px;
-  width: 100%;
-  color: var(--vc-clr-white);
-  font-size: 20px;
-}
-.carousel__item >img {
-   height: 300px;
-   width: 100%;
-   object-fit: cover;
-}
-.carousel__pagination{
-
-}
-</style>
