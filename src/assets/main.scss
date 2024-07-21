@@ -161,10 +161,16 @@ footer {
         position: relative;
 
         img{
+          filter: brightness(60%);
           border-radius: 10px;
           width: 200px;
           height: 130px;
           color: #f2f2f2;
+        }
+
+        img:hover{
+          transition: 0.5s;
+          filter: brightness(100%);
         }
 
         h4{
