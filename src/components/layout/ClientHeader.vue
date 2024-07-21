@@ -1,14 +1,16 @@
 <script setup lang="ts">
 import {ref} from "vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import {useMenuStore} from "@/stores/menu";
 
 const title = ref("Cho-long 블로그");
+const menuStore = useMenuStore();
 
 </script>
 
 <template>
   <header class="header">
-    <div>
+    <div @click="menuStore.toggleMenu">
       <font-awesome-icon :icon="['fas', 'bars']" />
     </div>
     <div>
@@ -18,10 +20,6 @@ const title = ref("Cho-long 블로그");
       <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
     </div>
   </header>
-  <nav>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/about">About</RouterLink>
-  </nav>
 </template>
 
 <style scoped>
