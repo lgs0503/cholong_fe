@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import {PostInfo} from "@/interface/common";
+import type {PostInfo} from "@/interface/common";
 
 defineProps<{
   postInfo: PostInfo
