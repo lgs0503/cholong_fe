@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Slider from "@/components/common/Slider.vue";
 import MainBoard from "@/components/common/MainBoard.vue";
-import {ImageItem, PostInfo} from "@/interface/common";
+import type {ImageItem, PostInfo} from "@/interface/common";
 
 const bannerImageList : ImageItem[] = [
   {
