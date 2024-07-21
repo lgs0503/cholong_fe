@@ -6,22 +6,22 @@ import MainBestPost from "@/components/common/MainBestPost.vue";
 
 const bannerImageList : ImageItem[] = [
   {
-    image: "../src/assets/images/1.png",
+    image: "https://picsum.photos/700/150",
     description: "이미지입니다."
   },
   {
-    image: "../src/assets/images/2.png",
+    image: "https://random.imagecdn.app/700/150",
     description: "이미지입니다2."
   },
   {
-    image: "../src/assets/images/3.png",
+    image: "https://loremflickr.com/700/150",
     description: "이미지입니다3."
   }
 ]
 
 const postInfoList : PostInfo[] = [
   {
-    image: "",
+    image: "https://picsum.photos/200/200",
     title: "[React] React 18 > 17 다운 그레이드 에러",
     category: "개발/React.Js",
     date : "2024.07.21 10:28",
@@ -29,7 +29,7 @@ const postInfoList : PostInfo[] = [
     idx : 1
   },
   {
-    image: "",
+    image: "https://random.imagecdn.app/200/200",
     title: "[SpringBoot]QueryDsl",
     category: "개발/Spring&SpringBoot",
     date : "2024.07.21 10:28",
@@ -37,7 +37,7 @@ const postInfoList : PostInfo[] = [
     idx : 2
   },
   {
-    image: "",
+    image: "https://loremflickr.com/200/200",
     title: "[SpringBoot]QueryDsl",
     category: "개발/Spring&SpringBoot",
     date : "2024.07.21 10:28",
@@ -45,7 +45,7 @@ const postInfoList : PostInfo[] = [
     idx : 3
   },
   {
-    image: "",
+    image: "https://picsum.photos/200/200",
     title: "[Spring Boot] ResponseEntity 활용 파일 업다운로드",
     category: "개발/Spring&SpringBoot",
     date : "2024.07.21 10:28",
@@ -53,7 +53,7 @@ const postInfoList : PostInfo[] = [
     idx : 4
   },
   {
-    image: "",
+    image: "https://random.imagecdn.app/200/200",
     title: "[Spring/Spring Boot] Spring 젠킨스 CI/CD 자동배포 설정",
     category: "개발/Spring&SpringBoot",
     date : "2024.07.21 10:28",
@@ -61,7 +61,7 @@ const postInfoList : PostInfo[] = [
     idx : 5
   },
   {
-    image: "",
+    image: "https://picsum.photos/200/200",
     title: "[SpringBoot]QueryDsl",
     category: "개발/Spring&SpringBoot",
     date : "2024.07.21 10:28",
@@ -69,7 +69,7 @@ const postInfoList : PostInfo[] = [
     idx : 6
   },
   {
-    image: "",
+    image: "https://picsum.photos/200/200",
     title: "[SpringBoot]QueryDsl",
     category: "개발/Spring&SpringBoot",
     date : "2024.07.21 10:28",
@@ -80,22 +80,22 @@ const postInfoList : PostInfo[] = [
 
 const bestImageInfoList : BestImageItem[] = [
   {
-    image: "",
+    image: "https://random.imagecdn.app/200/150",
     title: "이미지1",
     idx : 1
   },
   {
-    image: "",
+    image: "https://picsum.photos/200/150",
     title: "이미지2",
     idx : 2
   },
   {
-    image: "",
+    image: "https://loremflickr.com/200/150",
     title: "이미지3",
     idx : 3
   },
   {
-    image: "",
+    image: "https://random.imagecdn.app/200/150",
     title: "이미지4",
     idx : 4
   },
