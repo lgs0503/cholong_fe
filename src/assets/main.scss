@@ -293,11 +293,11 @@ footer {
 
           .post-category-form{
             .post-category{
-              font-size: 12px;
+              font-size: 10px;
             }
 
             .post-date{
-              font-size: 12px;
+              font-size: 10px;
             }
           }
 
@@ -308,6 +308,23 @@ footer {
             .button-more {
               display: none;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 400px) {
+  .main-best-section {
+    .best-post {
+      div {
+        .best-post-item {
+          width: 130px;
+
+          img {
+            width: 130px;
           }
         }
       }
