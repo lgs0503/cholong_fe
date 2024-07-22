@@ -13,9 +13,9 @@ const menuStore = useMenuStore();
     <div @click="menuStore.toggleMenu">
       <font-awesome-icon :icon="['fas', 'bars']" />
     </div>
-    <div>
+    <h1 class="header-title">
       {{ title }}
-    </div>
+    </h1>
     <div>
       <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
     </div>

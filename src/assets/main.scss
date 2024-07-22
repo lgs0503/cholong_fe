@@ -7,6 +7,12 @@
   font-size: 24px;
   border-bottom: 1px solid var(--vt-c-divider-light-1);
 
+  .header-title{
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
   div{
     svg {
       cursor: pointer;
@@ -20,13 +26,13 @@
 
 nav {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   top:0;
   left:0;
   color: #ffffff;
   height: 100%;
   z-index: 500;
-  width: 400px;
+  width: 350px;
 
   .menu-close-btn{
     float:right;
@@ -51,13 +57,18 @@ nav {
       list-style-type : none;
       li {
         a {
+          line-height: 40px;
           color: #ffffff;
           text-decoration: none;
         }
 
         ul {
+          padding-left: 30px;
           margin-bottom: 10px;
           li{
+            border-left: 1px solid white;
+            padding: 0 10px;
+
             a {
               font-size: 16px;
             }
@@ -307,6 +318,41 @@ footer {
           div {
             .button-more {
               display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  nav {
+    height: auto;
+    width: 100%;
+
+    .nav-menu{
+      text-align: center;
+      margin:0;
+      padding: 50px;
+
+      ul {
+        padding: 0;
+
+        li {
+          a {
+            font-size: 30px;
+          }
+
+          ul {
+            padding: 10px 0;
+            li{
+              border-left: none;
+              margin: 10px 0;
+
+              a {
+                font-size: 20px;
+                line-height: 25px;
+              }
             }
           }
         }

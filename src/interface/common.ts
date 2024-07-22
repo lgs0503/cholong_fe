@@ -17,3 +17,16 @@ export interface BestImageItem {
     title: string;
     idx:number;
 }
+
+export interface MenuInfo {
+    idx: number;
+    title: string;
+    url: string;
+    children: SubMenuInfo[];
+}
+
+export interface SubMenuInfo {
+    idx: number;
+    title: string;
+    url: string;
+}

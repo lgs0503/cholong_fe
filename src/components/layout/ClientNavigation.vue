@@ -1,8 +1,67 @@
 <script setup lang="ts">
 import {useMenuStore} from "@/stores/menu";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import {ref} from "vue";
+import type {MenuInfo} from "@/interface/common";
 
 const menuStore = useMenuStore();
+
+const menuList : MenuInfo[] = [
+  {
+    idx: 1,
+    title: "Home",
+    url: "",
+    children: [
+      {
+        idx: 1,
+        title: "MENU1",
+        url: ""
+      },
+      {
+        idx: 2,
+        title: "MENU2",
+        url: ""
+      },
+      {
+        idx: 3,
+        title: "MENU3",
+        url: ""
+      },
+      {
+        idx: 4,
+        title: "MENU4",
+        url: ""
+      }
+    ]
+  },
+  {
+    idx: 2,
+    title: "About",
+    url: "",
+    children: [
+      {
+        idx: 1,
+        title: "MENU1",
+        url: ""
+      },
+      {
+        idx: 2,
+        title: "MENU2",
+        url: ""
+      },
+      {
+        idx: 3,
+        title: "MENU3",
+        url: ""
+      },
+      {
+        idx: 4,
+        title: "MENU4",
+        url: ""
+      }
+    ]
+  }
+];
 </script>
 
 <template>
@@ -15,22 +74,12 @@ const menuStore = useMenuStore();
       </div>
       <div class="nav-menu">
         <ul>
-          <li>
-            <RouterLink to="/">Home</RouterLink>
+          <li v-for="menu in menuList" :key="menu.idx">
+            <RouterLink :to="menu.url">{{ menu.title }}</RouterLink>
             <ul>
-              <li><RouterLink to="/">MENU1</RouterLink></li>
-              <li><RouterLink to="/">MENU2</RouterLink></li>
-              <li><RouterLink to="/">MENU3</RouterLink></li>
-              <li><RouterLink to="/">MENU4</RouterLink></li>
-            </ul>
-          </li>
-          <li>
-            <RouterLink to="/about">About</RouterLink>
-            <ul>
-              <li><RouterLink to="/">MENU1</RouterLink></li>
-              <li><RouterLink to="/">MENU2</RouterLink></li>
-              <li><RouterLink to="/">MENU3</RouterLink></li>
-              <li><RouterLink to="/">MENU4</RouterLink></li>
+              <li v-for="subMenu in menu.children" :key="subMenu.idx">
+                <RouterLink :to="subMenu.url">{{ subMenu.title }}</RouterLink>
+              </li>
             </ul>
           </li>
         </ul>
