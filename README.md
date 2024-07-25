@@ -1,45 +1,41 @@
-# cholong_fe
+# CHO LONG - BACKEND
 
-This template should help get you started developing with Vue 3 in Vite.
+### 기술스택
 
-## Recommended IDE Setup
+* Vue3
+    * Vue Router
+    * Pinia
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### Cloud 서버 정보 (구글클라우드)
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+* SSH 접속 (private key id_rsa_4096 필요)
+```
+ssh -i ./id_rsa_4096 cholong@34.64.245.234
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
+* DOCKER
 ```
+#로컬 및 github상 실행
+#이미지빌드
+docker build -t lgs0503/cholong_fe:1.0.1 .
 
-### Type-Check, Compile and Minify for Production
+#이미지 푸쉬
+docker push lgs0503/cholong_fe:1.0.1
+#-----------------------------------------------------------
+#운영 에서 실행
+#컨테이너 중지
+docker stop cholong_fe
 
-```sh
-npm run build
-```
+#컨테이너 삭제
+docker rm cholong_fe
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+#도커 이미지삭제
+docker rmi lgs0503/cholong_fe:1.0.1
+#도커 풀
+docker pull lgs0503/cholong_fe:1.0.1
+#도커 컨테이너 실행
+docker run -dit --name cholong_fe -p 8080:8080 lgs0503/cholong_fe:1.0.1
 
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+#도커 컨테이너 로그 확인
+docker logs --tail 10 -f cholong_fe 
 ```
